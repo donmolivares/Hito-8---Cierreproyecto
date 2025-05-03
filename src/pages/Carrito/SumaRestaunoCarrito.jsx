@@ -4,6 +4,8 @@ import { GlobalContext } from "../../context/GlobalContext"
 const SumaRestaunoCarrito = ({product}) => {
     const {carrito, setCarrito, buyProducts} = useContext(GlobalContext)
 
+  
+  
     const decrese = () => {
         const productrepeat = carrito.find((item) => item.id === product.id)
 
@@ -16,7 +18,6 @@ const SumaRestaunoCarrito = ({product}) => {
    
   return (
     <>
-     
         <button class="btn btn-secondary" style={{with: '40px', height: '40px'}} onClick={decrese}>
             -
         </button>

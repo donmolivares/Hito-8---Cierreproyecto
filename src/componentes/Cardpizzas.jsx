@@ -9,6 +9,17 @@ import { useContext } from 'react';
 
 const Cardpizzas = ({product}) => {
   const {buyProducts,TotalizadorCarrito2} = useContext(GlobalContext);
+  console.log(product.price)
+  const precio = product.price;
+
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  };
+
+  const valor = numberWithCommas(precio)
+
+
+
     return(
        <div className="card-pizza">
             <img className="imagen-pizza" src={product.img} alt={product.name}/>
@@ -23,7 +34,7 @@ const Cardpizzas = ({product}) => {
                 <h3 style={{color:"#a49d9c"}}>Ingredientes</h3>
                 {product.ingredients.map((ingrediente)=>(
                   <ul>
-                    <li key={ingrediente}>{ingrediente}</li>
+                    <li key={ingrediente}>{ingrediente} </li>
                   </ul>  
                 )
                 )}
@@ -31,7 +42,7 @@ const Cardpizzas = ({product}) => {
             <p>- </p>
             </div> 
  
-            <h3 style={{color:"black"}}>Precio $ : {product.price}</h3>
+            <h3 style={{color:"black"}}>Precio $ : {valor}</h3>
             
             <div className="flex-row">
             <Link className="nav-link" aria-current="page" to={`/Pizza/${product.id}`}>

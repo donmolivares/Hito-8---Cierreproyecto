@@ -8,8 +8,8 @@ import './Carrito.css'
 
 
 const MuestraCarrito = () => {
-  const {carrito, TotalizadorCarrito2} = useContext(GlobalContext)
-  TotalizadorCarrito2()
+  const {carrito, totalizadorCarrito2} = useContext(GlobalContext)
+  totalizadorCarrito2()
  
  
   return (
