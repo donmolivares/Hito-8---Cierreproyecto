@@ -44,7 +44,7 @@ const Login = () => {
             />
 
             <button type="submit" class="btn btn-warning">
-              Consultar
+              Ingresar
             </button>
           </div>
         </form>
